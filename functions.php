@@ -1,5 +1,11 @@
 <?php 
+//声明对woocommerce支持
+add_theme_support( 'woocommerce' );
+
+//在主题中使用到Bootstrap的下拉菜单支持
 require_once('include/wp-bootstrap-navwalker.php');
+
+
 //Load script 
 function wpbootstrap_scripts_with_jquery()
 {
@@ -9,7 +15,6 @@ function wpbootstrap_scripts_with_jquery()
 	wp_enqueue_script( 'custom-script' );
 }
 add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
-
 
 // // register menu
 // function halo_menu_setup(){
@@ -24,9 +29,9 @@ add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 /* Theme setup */
 add_action( 'after_setup_theme', 'wpt_setup' );
 if ( ! function_exists( 'wpt_setup' ) ):
-	function wpt_setup() { 
-		register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
-	} 
+    	function wpt_setup() { 
+    		register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
+    	} 
 endif;
 
 
@@ -42,90 +47,32 @@ endif;
 // add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
 
-
-
-
-
 //Register Sidebars
 if ( function_exists('register_sidebar') ){
 
-register_sidebar(array(
-'name' => 'Sidebar',
-'description' => 'Widgets in this area will be shown in the sidebar.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
+    register_sidebar(array(
+    'name' => 'Sidebar',
+    'description' => 'Widgets in this area will be shown in the sidebar.',
+    'before_widget' => '<div class="sidebar-nav">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
 ));
 
 register_sidebar(array(
-'name' => 'Sidebar_Cat1',
-'description' => 'Widgets in this area will be shown in the category 1.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
+
+    'name' => 'Sidebar_Cat1',
+    'description' => 'Widgets in this area will be shown in the category 1.',
+    'before_widget' => '<div class="sidebar-nav">',
+    'after_widget' => '</div>',
+    'before_title' => '<li class="nav-header">',
+    'after_title' => '</li>',
 ));
 
 register_sidebar(array(
 'name' => 'Sidebar_Cat2',
 'description' => 'Widgets in this area will be shown in the category 2.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
-));
-
-register_sidebar(array(
-'name' => 'Sidebar_Cat3',
-'description' => 'Widgets in this area will be shown in the category 3.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
-));
-
-register_sidebar(array(
-'name' => 'Sidebar_Cat4',
-'description' => 'Widgets in this area will be shown in the category 4.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
-));
-
-register_sidebar(array(
-'name' => 'Sidebar_Cat5',
-'description' => 'Widgets in this area will be shown in the category 5.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
-));
-
-register_sidebar(array(
-'name' => 'Sidebar_Cat6',
-'description' => 'Widgets in this area will be shown in the category 6.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
-));
-
-register_sidebar(array(
-'name' => 'Sidebar_Cat7',
-'description' => 'Widgets in this area will be shown in the category 7.',
-'before_widget' => '<div class="well sidebar-nav">',
-'after_widget' => '</div>',
-'before_title' => '<li class="nav-header">',
-'after_title' => '</li>',
-));
-
-
-register_sidebar(array(
-'name' => 'Sidebar_Cat8',
-'description' => 'Widgets in this area will be shown in the category 8.',
-'before_widget' => '<div class="well sidebar-nav">',
+'before_widget' => '<div class="sidebar-nav">',
 'after_widget' => '</div>',
 'before_title' => '<li class="nav-header">',
 'after_title' => '</li>',
@@ -137,8 +84,8 @@ register_sidebar(array(
 'description' => 'Widgets in this area will be shown in the footer - left side.',
 'before_widget' => '<div class="footer-box">',
 'after_widget' => '</div>',
-'before_title' => '<h4>',
-'after_title' => '</h4>',
+'before_title' => '<h3>',
+'after_title' => '</h3>',
 ));
 
 register_sidebar(array(
@@ -146,8 +93,8 @@ register_sidebar(array(
 'description' => 'Widgets in this area will be shown in the footer - middle left.',
 'before_widget' => '<div class="footer-box">',
 'after_widget' => '</div>',
-'before_title' => '<h4>',
-'after_title' => '</h4>',
+'before_title' => '<h3>',
+'after_title' => '</h3>',
 ));
 
 register_sidebar(array(
@@ -155,8 +102,8 @@ register_sidebar(array(
 'description' => 'Widgets in this area will be shown in the footer - middle right.',
 'before_widget' => '<div class="footer-box">',
 'after_widget' => '</div>',
-'before_title' => '<h4>',
-'after_title' => '</h4>',
+'before_title' => '<h3>',
+'after_title' => '</h3>',
 ));
 
 register_sidebar(array(
@@ -164,8 +111,8 @@ register_sidebar(array(
 'description' => 'Widgets in this area will be shown in the footer - right side.',
 'before_widget' => '<div class="footer-box">',
 'after_widget' => '</div>',
-'before_title' => '<h4>',
-'after_title' => '</h4>',
+'before_title' => '<h3>',
+'after_title' => '</h3>',
 ));
 
 }//if ( function_exists('register_sidebar') )
@@ -192,6 +139,7 @@ function get_topCategoryID(){
   }
   return $topCategoryID;
 }
+
 /*
 Description: Get the top categoty ID through ID
 */
@@ -300,6 +248,8 @@ function setPostViews($postID) {    //将文章id传到函数中，文章被采�
     }
 
 }
+
+
 
 
 ?>

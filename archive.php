@@ -1,13 +1,11 @@
-
 <?php get_header(); ?>	
  	
  		<div class="col-md-9" >
-
+		<?php echo "<h1>I am archive</h1>" ?>
 			<div>
 				<ol class="breadcrumb">
 				  <li><a href="<?=site_url();?>">Home</a> <span class="divider" /></li>
 				  <li class="active"><a href="#"><?php single_cat_title(); ?></a> <span class="divider"/></li>
-
 				</ol>
 			</div>
 
@@ -18,7 +16,7 @@
 			<?php endwhile; else: ?>
 
 			<center>
-				<h3 class="center">暂时没有文章哦!</h3>
+				<h3>暂时没有文章哦!</h3>
 			</center>
 
 			<?php endif; ?>

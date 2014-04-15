@@ -2,7 +2,7 @@
 	Theme Name:Halo0.2
 	Theme URL: http://www.hanlin.me
 	Description:A simple,elegant theme by Han
-	Author: 暨林瀚,张金栋
+	Author: 暨林瀚
 	Author URI: http://www.hanlin.me
 	Version: 0.2
 	Tags: responsive, white, bootstrap
@@ -20,101 +20,18 @@
 *{
 		margin:0;
 		padding:0;
-		font-size:15px;
-		list-style:none;
 		border:0;
+		list-style:none;
 		-webkit-transition:opacity .2s ease-out;
 }
 
-/*body { 
-     background:#FFFFFF;
-	 background: url("http://english.jnu.edu.cn/images/body_bg.png") repeat 0 0;  
-}*/
+body { 
+	/*background-color:rgba(219,219,219,0.5);*/
+    /* background:#FFFFFF;
+	 background: url("http://english.jnu.edu.cn/images/body_bg.png") repeat 0 0;  */
+	/* background-color:rgba(219,219,219,0.3);*/
+}
 
 .clear{
   clear: both;
 }
-
-
-/*a {
-    text-decoration: none;
-    color: #2E70B1;
-    -webkit-transition: color 0.2s ease-in-out;
-    -moz-transition: color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out;
-    -ms-transition: color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out;
-}
-a:hover {
-    text-decoration: none;
-    color: #d54e21;
-}*/
-
-/*.center {
-  width: auto;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-.text-center {
-  text-align: left;
-}*/
-
-/*
-****************************************************/
-<style>
-.div1 {
-	filter:alpha(opacity=50);
-	/*IE*/
-     opacity:0.5;
-	/*Mozilla*/
-}
-#container {
-	border:7px solid rgba(269,269,269,0.5);
-	background-color:rgba(219,219,219,0.3);
-	background:#eee\9;
-	filter:alpha(opacity=50);
-	width:80%;
-	/*margin:40px auto;
-	*/
- 	   line-height:200%;
-	font-size:14px;
-	padding:100px;
-	border-radius:40px;
-}
-#container * {
-	position:relative;
-}
-.sidebar-nav {
-	border:10px solid rgba(219,219,219,0.1);
-	background-color:rgba(219,219,219,0.3);
-	background:#eee\9;
-	filter:alpha(opacity=50);
-	margin-top:40px;
-	line-height:200%;
-	font-size:14px;
-	padding:14px;
-	border-radius:40px;
-	min-height:800px;
-}
-.sidebar-nav * {
-	position:relative;
-}
-.sidebar-nav>.menu-item-object-category {
-	border:2px solid rgba(219,219,219,0.5);
-	background-color:rgba(219,219,219,0.3);
-	background:#eee\9;
-	filter:alpha(opacity=50);
-	margin:30px;
-	line-height:150%;
-	font-size:14px;
-	border-radius:3px;
-}
-.sub-menu > .menu-item-object-category {
-	border:2px solid rgba(219,219,219,0.5);
-	background-color:rgba(219,219,219,0.3);
-	background:#eee\9;
-	filter:alpha(opacity=50);
-	margin:10px;
-}
-</style>

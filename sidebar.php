@@ -1,16 +1,18 @@
 <div class="col-md-3">
-      <?php include (TEMPLATEPATH . '/include/article-list.php'); 
-      show_article_list(1);
-      show_article_list(2);
+      <?php
+      if ( function_exists('dynamic_sidebar') &&
+               dynamic_sidebar('Sidebar') ) : 
+      endif; 
+
+      // include (TEMPLATEPATH . '/include/article-list.php'); 
+      // show_article_list(1);
+      // show_article_list(2);
       ?>
 </div>
 
 
 <?php
-      if ( function_exists('dynamic_sidebar') &&
-               dynamic_sidebar('Sidebar_Cat1') ) : 
-      endif; 
-
+   
     //  $topCatID = get_topCategoryID();
     // // echo "<pre>TopCat is $topCatID <br>Name is ".get_cat_name($topCatID).'</pre>';
 
