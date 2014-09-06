@@ -2,8 +2,6 @@
 	
  	<div id="content" class="col-md-9" >
 
-
-
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 					<?php include ( TEMPLATEPATH . '/include/archive_box.php'); ?>

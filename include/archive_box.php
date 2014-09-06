@@ -12,7 +12,27 @@
 
 	<div class="archive_title pull-left" >
 		<a href="<?php the_permalink() ?>" rel="bookmark" title="Read <?php the_title_attribute(); ?>"> 
-			<h2><?php the_title(); ?></h2> 
+		<?php if(in_category('twitter')){ 
+
+			if(get_the_title()){ ?>
+				<h2><?php the_title(); ?></h2> 
+			<?php }else{ ?>
+
+					<?php if (has_excerpt()) { ?> 
+						<?php the_excerpt() ?>
+					<?php } else{
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;".mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 40,"...");
+					} ?>
+
+			<?php } ?>
+
+
+    			
+
+        <?php }else{ ?>
+        	<h2><?php the_title(); ?></h2> 
+        <?php } ?>	
+			
 		</a>
 	</div>
 

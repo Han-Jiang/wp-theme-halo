@@ -9,7 +9,7 @@ Template Name: PROTOFOLIO
 <div id="top"></div>
 
 <div id="logo-nav">
-  <header class="container">
+  <header>
     <hgroup>
       <h1 id="logo"> Han Jiang </h1>
     </hgroup><!-- /hgroup -->

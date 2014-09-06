@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-      <div id="top"></div>
+
 
 <div id="logo-nav">
   <header class="container">

@@ -1,5 +1,4 @@
 
-
 <div id = "breadcrumb" >
 	<ul class="breadcrumb">
 	  <li> <a href="<?=site_url();?>">Home</a> </li>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="暨林瀚">
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri().'/img/favicon.ico' ?>">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri().'/images/favicon.ico' ?>">
 
     <title> <?php bloginfo('name'); ?></title>
 
@@ -31,43 +31,12 @@
   </head>  
 
 <body>
-<headrer>
 
-    <!-- Static navbar -->
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
+<!-- For back to top -->
+<div id="top"></div>
 
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="<?php bloginfo('url')?>"> <?php bloginfo('name'); ?></a>
-        </div>
-        
-        <div class="navbar-collapse collapse">
-        <?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                'container'         => false,
-                //'container'         => 'div',
-                //'container_class'   => 'collapse navbar-collapse',
-				        //'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav navbar-right',
-                // 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-		    ?>
-	    </div>
+<?php get_template_part('./include/header-navbar'); ?>
 
-      </div>
-    </div>
-
-</headrer>
 <div class="container">
       
     <div class="row">
