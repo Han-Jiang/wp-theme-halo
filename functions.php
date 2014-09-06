@@ -1,20 +1,71 @@
 <?php 
+
+
+//添加
+require_once('functions/scripts.php');
+require_once('functions/sidebars.php');
+require_once('functions/post_types.php');
+
+define(THEME_OPTIONS, 'ci_'.'MUSTACHE'.'_theme_options');
+$ci = get_option(THEME_OPTIONS);
+// global $ci;
+// if (isset($ci[$setting]) and (!empty($ci[$setting])))
+//  return $ci[$setting];
+// else
+//  return FALSE;
+
+
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 280, 190, true );
+add_image_size( 'square', 280, 280, true);
+add_image_size( 'portfolio_thumb', 440, 440, true);
+add_image_size( 'client_thumb', 420, 250, true);
+
+//排除文章
+function custom_exclude_category( $query ) {
+    if ( !$query->is_single()) {
+        $query->set( 'category__not_in', '34' );  //-34表示需要排除的分类目录
+    }
+    if ( $query->is_home()) {
+         $query->set( 'category__not_in', array(34,45) );
+    }
+}
+add_action( 'pre_get_posts', 'custom_exclude_category' );
+
 //声明对woocommerce支持
 add_theme_support( 'woocommerce' );
+
+//声明对背景图的支持
+// This theme allows users to set a custom background
+add_custom_background();
 
 //在主题中使用到Bootstrap的下拉菜单支持
 require_once('include/wp-bootstrap-navwalker.php');
 
 
-//Load script 
-function wpbootstrap_scripts_with_jquery()
-{
-	// Register the script like this for a theme:
-	wp_register_script( 'custom-script', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ) );
-	// For either a plugin or a theme, you can then enqueue the script:
-	wp_enqueue_script( 'custom-script' );
+function juice_link_install() {   
+    global $wpdb;
+ 
+    $table_name = $wpdb->prefix . "juice_links";
+    if($wpdb->get_var("show tables like '$table_name'") != $table_name ) {
+        
+        $sql = "CREATE TABLE " . $table_name . " (
+        `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        `url` varchar(255) DEFAULT NULL,
+        `title` varchar(255) DEFAULT NULL,
+        `comment` tinytext,
+        `tags` tinytext,
+        `weight` int(11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`url`)
+        );";
+
+        require_once(ABSPATH . "wp-admin/includes/upgrade.php");
+ 
+        dbDelta($sql);
+    }
 }
-add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
+add_action( 'after_setup_theme', 'juice_link_install' );
+
 
 // // register menu
 // function halo_menu_setup(){
@@ -35,16 +86,7 @@ if ( ! function_exists( 'wpt_setup' ) ):
 endif;
 
 
-// function wpt_register_js() {
-    // wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
-    // wp_enqueue_script('jquery.bootstrap.min');
-// }
-// add_action( 'init', 'wpt_register_js' );
-// function wpt_register_css() {
-    // wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/css/bootstrap.min.css' );
-    // wp_enqueue_style( 'bootstrap.min' );
-// }
-// add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
+
 
 
 //Register Sidebars
@@ -248,6 +290,9 @@ function setPostViews($postID) {    //将文章id传到函数中，文章被采�
     }
 
 }
+
+
+
 
 
 
