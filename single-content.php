@@ -1,5 +1,5 @@
 	 	<!-- 文章 -->	
-		<div class="single_post_box col-md-12">
+		<div class="single_post_box col-md-10 col-md-offset-1">
 			
 			<center>
 				<div class="single_post_title_box">
@@ -12,37 +12,38 @@
 					<div class="single_post_meta">
 						<!--作者名字-->
 						<span class="single_post_author">
-							<?php the_author_posts_link('name'); ?>
-						</span>
+							<?php //the_author_posts_link('name'); ?>
+						</span> 
+						
 						<!--日期-->
 						<span class="single_post_date">
-							<?php the_time('Y/m/日') ?>
+							<?php the_time('Y-m-d') ?>
 						</span>
-
+						·
 						<!--类别-->
 						<span class="single_post_category">
-							&#8260; <?php the_category(', ') ?>
+							<?php the_category(', ') ?>
 						</span>
-
+						·
 						<!--文章浏览次数-->
 						<span class="single_post_views">
 							<?php setPostViews(get_the_ID()); ?>
-							<?php echo getPostViews(get_the_ID());?> 浏览
+							<?php echo getPostViews(get_the_ID());?> Read
 						</span>
 
 						<!--评论数-->
 						<span class="single_post_comment"> 
-							<?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?>
+							<?php //comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?>
 						</span>
 
 						<!--编辑链接-->
 						<span class="single_post_edit">
-							<?php edit_post_link('Edit', ' | ', ''); ?>
+							<?php //edit_post_link('Edit', ' | ', ''); ?>
 						</span>
 
 						<!--标签-->
 						<span class="single_post_tag">
-							<?php the_tags('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ', ', ', ''); ?>
+							<?php //the_tags('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ', ', ', ''); ?>
 						</span>
 
 					</div>
@@ -63,4 +64,4 @@
 			<li class="clear"> <?php next_post_link('%link','【下篇】%title') ?> </li>
 		</div>
 		
-		<?php comments_template('', true);?>
+		

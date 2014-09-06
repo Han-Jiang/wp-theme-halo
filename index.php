@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
       <div id="content" class="col-md-9" >
-			
+
 			<!-- Main loop -->
         	<?php if (have_posts()) : ?>
 					<?php while (have_posts()) : the_post(); ?>
@@ -20,6 +20,5 @@
 			<?php endif; ?>
 
       </div>
-      
-<?php get_sidebar(); ?>  
+
 <?php get_footer();?>

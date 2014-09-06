@@ -10,13 +10,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* #Basic Styles
 ================================================== */
-body { background: #fff; font: 14px/21px 'Lato', sans-serif; color: #fff; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */ -webkit-text-size-adjust: 100%; }
+body { background: #fff; font: 18px/21px 'Lato', sans-serif; color: #444; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */ -webkit-text-size-adjust: 100%; }
 
 /* #Typography
 ================================================== */
 h1, h2, h3, h4, h5, h6 { color: #181818; font-family: "Georgia","Times New Roman",serif; font-weight: 400; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit }
-h2 { font: bold 36px 'Lato', sans-serif; font-style: italic; /*color: #fff;*/ }
+h2 { font: bold 18px 'Lato', sans-serif; font-style: normal; /*color: #fff;*/ }
 .subheader { color: #777 }
 p { margin: 0 0 20px }
 p img { margin: 0 }

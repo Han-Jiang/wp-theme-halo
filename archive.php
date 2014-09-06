@@ -1,6 +1,6 @@
 <?php get_header(); ?>	
  	
- 		<div id="content" class="col-md-9" >
+ 		<div id="content" class="col-md-10 col-md-offset-1" >
  			<!-- bread crumb -->
 			<?php include (TEMPLATEPATH . '/include/breadcrumb.php'); ?>
 
@@ -19,5 +19,4 @@
 
  		</div>
 
-<?php get_sidebar();?>
 <?php get_footer();?>
