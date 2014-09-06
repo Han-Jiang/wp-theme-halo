@@ -61,7 +61,9 @@ Template Name: 时间轴归档
         </ul>
     </div>
     </div>
+
 <script type="text/javascript">
+ jQuery(function($) {
 
     $('.archives ul.archives-monthlisting').hide();
     $('.archives ul.archives-monthlisting:first').show();
@@ -69,6 +71,8 @@ Template Name: 时间轴归档
         $(this).next().slideToggle('fast');
         return false;
     });
+ });
+    
 
 </script>
 
