@@ -12,6 +12,11 @@
 
     <!-- Core CSS -->
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
+
+    <!-- Font
+    ================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900italic,700|Prata|Qwigley' rel='stylesheet' type='text/css'>
+  
    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -19,18 +24,19 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
       
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	
-  <?php wp_enqueue_script("jquery"); ?>
+
+  <?php //wp_enqueue_script("jquery"); ?>
   <?php wp_head(); ?>   
   
   </head>  
 
 <body>
+<headrer>
 
     <!-- Static navbar -->
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -39,31 +45,29 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="<?php bloginfo('url')?>"> <?php bloginfo('name'); ?></a>
-		  
-		  <!-- Search box -->
-		  <form class="navbar-form navbar-right">
-			<input type="search" class="form-control" results="5" name="s"  placeholder="Search">
-		  </form>
-		  
         </div>
-
+        
+        <div class="navbar-collapse collapse">
         <?php
             wp_nav_menu( array(
                 'menu'              => 'primary',
                 'theme_location'    => 'primary',
                 'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-				// 'container_id'      => 'bs-example-navbar-collapse-1',
+                'container'         => false,
+                //'container'         => 'div',
+                //'container_class'   => 'collapse navbar-collapse',
+				        //'container_id'      => 'bs-example-navbar-collapse-1',
                 'menu_class'        => 'nav navbar-nav navbar-right',
                 // 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
-		?>
+		    ?>
+	    </div>
 
       </div>
     </div>
-	
+
+</headrer>
 <div class="container">
       
     <div class="row">

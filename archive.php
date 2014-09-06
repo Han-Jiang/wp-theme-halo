@@ -1,14 +1,10 @@
 <?php get_header(); ?>	
  	
- 		<div class="col-md-9" >
-		<?php echo "<h1>I am archive</h1>" ?>
-			<div>
-				<ol class="breadcrumb">
-				  <li><a href="<?=site_url();?>">Home</a> <span class="divider" /></li>
-				  <li class="active"><a href="#"><?php single_cat_title(); ?></a> <span class="divider"/></li>
-				</ol>
-			</div>
+ 		<div id="content" class="col-md-9" >
+ 			<!-- bread crumb -->
+			<?php include (TEMPLATEPATH . '/include/breadcrumb.php'); ?>
 
+			<!-- Main loop -->
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
 					<?php include (TEMPLATEPATH . '/include/archive_box.php'); ?>
@@ -20,6 +16,7 @@
 			</center>
 
 			<?php endif; ?>
+
  		</div>
 
 <?php get_sidebar();?>

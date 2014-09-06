@@ -20,7 +20,6 @@
 			<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 			
 
-
 			<?php endwhile; endif; ?>
 			
 			<p><a class="btn" href="<?php echo get_category_link($catID);?>">View more &raquo;</a></p>   

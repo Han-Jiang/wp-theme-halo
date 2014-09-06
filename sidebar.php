@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div id="sidebar" class="col-md-3">
       <?php
       if ( function_exists('dynamic_sidebar') &&
                dynamic_sidebar('Sidebar') ) : 

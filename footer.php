@@ -1,7 +1,6 @@
   </div><!--/.row-->
 </div><!--/.container-->
 
-
 <!-- Footer
 ================================================== -->
         <div class="container-fluid">
@@ -57,17 +56,21 @@
 
       <footer>
         <center>
-        <p>Internetional School of Jinan University</p>
-        <p>Designed and Created By <a href="<?php echo site_url().'/wp-admin/'?>"> Han </a></p>
+
+        <p>Designed and Created By <a href="<?php echo site_url().'/wp-admin/'?>"> Han Jiang</a></p>
         <ul class="footer-links">
-          <li><a href="#">Chinese</a></li>
+          <li><a href="http://www.han.pm/resume-en.pdf" target="blank">Resume</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="#">Jinan University</a></li>
+          <li><a href="#">About</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="#">Changelog</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
-        </center>>
+        </center>
       </footer>
+
+      <div id="bottom"></div>
+
+      <a href="#" id="btop"><?php _e('Back to Top', mustache); ?></a>
 
   <?php wp_footer(); ?>
 

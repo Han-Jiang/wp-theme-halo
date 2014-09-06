@@ -1,12 +1,8 @@
 <?php get_header(); ?>	
 	
- 	<div class="col-md-9">
+ 	<div id="content" class="col-md-9" >
 
- 		<?php echo "<h1>I am search</h1>" ?>
-		<div class="browse">现在位置 ＞
-		<a title="返回首页" href="<?php echo get_settings('Home'); ?>/">首页</a>
-		 ＞搜索结果
-		</div>
+
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
