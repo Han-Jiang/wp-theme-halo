@@ -1,24 +1,36 @@
 <?php get_header(); ?>
 
-      <div id="content" class="col-md-9" >
+      <div id="top"></div>
 
-			<!-- Main loop -->
-        	<?php if (have_posts()) : ?>
-					<?php while (have_posts()) : the_post(); ?>
+<div id="logo-nav">
+  <header class="container">
+    <hgroup>
+      <h1 id="logo"> Han Jiang </h1>
+    </hgroup><!-- /hgroup -->
+    <nav id="navigation" class="sixteen group">
+      <ul class="col-md-4 left main-nav">
+        <?php if ( true ) :?>
+          <li><a href="#" class="opt1"><?php echo "services_menu_title"; ?></a></li>
+        <?php endif; ?>
+        <?php if ( true ) :?>
+          <li><a href="#" class="opt2"> portfolio_menu_title </a></li>
+        <?php endif; ?>
+      </ul><!-- /nav.left -->
+      <p class="col-md-4"></p>
+      <ul class="col-md-4 right main-nav">
+        <?php if ( true ) :?>
+          <li><a href="#" class="opt3">team_menu_title</a></li>
+        <?php endif; ?>
+        <?php if ( true ) :?>
+          <li><a href="#" class="opt4">contact_menu_title</a></li>
+        <?php endif; ?>
+      </ul><!-- /nav.right -->
+    </nav><!-- /navigation -->
+  </header><!-- /header.container -->
+</div><!-- /logo-nav -->
 
-						<?php include (TEMPLATEPATH . '/include/archive_box.php'); ?>
-						
-					<?php endwhile; ?>
 
-					<!-- pager -->
-					<?php include (TEMPLATEPATH . '/include/pager.php'); ?>
-					
-			<?php else : ?>
-			<center>
-				<h3><?php _e('Not Found'); ?></h3>
-			</center>
-			<?php endif; ?>
+<?php get_template_part('./include/inc_portfolio'); ?>
 
-      </div>
 
 <?php get_footer();?>

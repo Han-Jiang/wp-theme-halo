@@ -9,10 +9,14 @@
 		
 					<?php include (TEMPLATEPATH . '/include/archive_box.php'); ?>
 
-			<?php endwhile; else: ?>
+				<?php endwhile; ?>
+				<!-- pager --> 
+				<?php include (TEMPLATEPATH . '/include/pager.php'); ?>
+
+			<?php else: ?>
 
 			<center>
-				<h3>暂时没有文章哦!</h3>
+				<h3><?php _e('暂时没有文章哦!'); ?></h3>
 			</center>
 
 			<?php endif; ?>
