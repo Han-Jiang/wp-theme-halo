@@ -35,7 +35,7 @@
 <!-- For back to top -->
 <div id="top"></div>
 
-<?php get_template_part('./include/header-navbar'); ?>
+<?php get_template_part('./include/static-navbar'); ?>
 
 <div class="container">
       

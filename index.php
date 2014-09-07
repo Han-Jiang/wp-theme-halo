@@ -30,7 +30,14 @@
 </div><!-- /logo-nav -->
 
 
+<div id="services-wrap">
+  <section id="services">
+    <?php get_template_part('./include/inc_services'); ?>
+  </section><!-- /#services -->
+</div><!-- /container -->
+
+
 <?php get_template_part('./include/inc_portfolio'); ?>
 
-
+<?php //get_template_part('./include/inc_contact'); ?>
 <?php get_footer();?>
