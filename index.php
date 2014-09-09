@@ -1,43 +1,46 @@
 <?php get_header(); ?>
 
 
+<header>
 
-<div id="logo-nav">
-  <header class="container">
-    <hgroup>
-      <h1 id="logo"> Han Jiang </h1>
-    </hgroup><!-- /hgroup -->
-    <nav id="navigation" class="sixteen group">
-      <ul class="col-md-4 left main-nav">
-        <?php if ( true ) :?>
-          <li><a href="#" class="opt1"><?php echo "services_menu_title"; ?></a></li>
-        <?php endif; ?>
-        <?php if ( true ) :?>
-          <li><a href="#" class="opt2"> portfolio_menu_title </a></li>
-        <?php endif; ?>
+
+<div id="gentle-bar" class="navbar">
+
+    <div id="navigation">
+      <ul id="gentle-left" class="col-md-4 pull-left gentle main-nav">
+          <li><a href="#" class="opt1" id="nopt1">Services</a></li>
+          <li><a href="#" class="opt2" id="nopt2">Portfolio</a></li>
       </ul><!-- /nav.left -->
-      <p class="col-md-4"></p>
-      <ul class="col-md-4 right main-nav">
-        <?php if ( true ) :?>
-          <li><a href="#" class="opt3">team_menu_title</a></li>
-        <?php endif; ?>
-        <?php if ( true ) :?>
-          <li><a href="#" class="opt4">contact_menu_title</a></li>
-        <?php endif; ?>
+      <ul class="col-md-4 gentle">
+        <h1 id="logo"> Han Jiang </h1>        
+      </ul>
+      <ul class="col-md-4 pull-right gentle main-nav"> 
+          <li><a href="#" class="opt3" id="nopt3">Clients</a></li>
+          <li><a href="#" class="opt4" id="nopt4">Contact Me</a></li>
       </ul><!-- /nav.right -->
-    </nav><!-- /navigation -->
-  </header><!-- /header.container -->
-</div><!-- /logo-nav -->
+    </div><!-- /navigation -->
+  </div><!-- /navigation -->
+</header><!-- /header -->
 
+<?php get_template_part('./include/inc_services'); ?>
 
-<div id="services-wrap">
-  <section id="services">
-    <?php get_template_part('./include/inc_services'); ?>
-  </section><!-- /#services -->
-</div><!-- /container -->
+<div class="container">
+      
+    <div class="row">
 
 
 <?php get_template_part('./include/inc_portfolio'); ?>
 
-<?php //get_template_part('./include/inc_contact'); ?>
+
+
+  </div><!--/.row-->
+</div><!--/.container-->
+
+
+<?php get_template_part('./include/inc_clients'); ?>
+
+<?php get_template_part('./include/inc_contact'); ?>
+
+
+
 <?php get_footer();?>

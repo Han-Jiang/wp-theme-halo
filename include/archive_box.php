@@ -9,6 +9,14 @@
 
 .archive_box h2:hover{ 
     color: #97263e;} 
+
+.archive_title{
+	width:560px; 
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis; 
+	-o-text-overflow:ellipsis;
+}
 </style>
 
 

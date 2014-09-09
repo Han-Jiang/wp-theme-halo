@@ -1,5 +1,3 @@
-  </div><!--/.row-->
-</div><!--/.container-->
 
 <!-- Footer
 ================================================== -->
@@ -41,8 +39,16 @@
             margin-bottom: 0;
             color: #777;
           }
+          footer{
+            padding-top:10px; 
+            /*元素居中*/
+            text-align: center;  
+
+            /*background*/-color: #e7e7e7;
+          }
+
           .footer-links {
-            margin: 10px 0;
+            padding: 10px 0 25px 0;
           }
           .footer-links li {
             display: inline;
@@ -55,17 +61,16 @@
         </style>
 
       <footer>
-        <center>
-
+        
         <p>Designed and Created By <a href="<?php echo site_url().'/wp-admin/'?>"> Han Jiang</a></p>
         <ul class="footer-links">
           <li><a href="http://www.han.pm/resume-en.pdf" target="blank">Resume</a></li>
           <li class="muted">&middot;</li>
           <li><a href="#">About</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contact Me</a></li>
         </ul>
-        </center>
+
       </footer>
 
       <div id="bottom"></div>

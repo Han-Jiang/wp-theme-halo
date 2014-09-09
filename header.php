@@ -37,9 +37,6 @@
 
 <?php get_template_part('./include/static-navbar'); ?>
 
-<div class="container">
-      
-    <div class="row">
 
 
 

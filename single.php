@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<div class="container">
+      
+    <div class="row">
 
 <!-- 正文字体放大缩小-->
 <script type="text/javascript">
@@ -35,5 +38,6 @@
 	
 </div>
 <!-- end: single -->
-
+  </div><!--/.row-->
+</div><!--/.container-->
 <?php get_footer();?>

@@ -5,7 +5,7 @@
 
 require_once('post_types/services.php');
 require_once('post_types/portfolio.php');
-// require_once('post_types/clients.php');
+require_once('post_types/clients.php');
 // require_once('post_types/team.php');
 
 

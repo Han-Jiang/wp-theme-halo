@@ -1,9 +1,13 @@
 <?php
 /*
-Template Name: 显示所有文章
+Template Name: Default Page
 */
 ?>
 <?php get_header(); ?>	
+
+<div class="container">
+      
+    <div class="row">
 
  		<div id="content" class="col-md-9" >
 
@@ -22,4 +26,7 @@ Template Name: 显示所有文章
  		</div>
 
 <?php get_sidebar();?>
+
+  </div><!--/.row-->
+</div><!--/.container-->
 <?php get_footer();?>

@@ -1,9 +1,10 @@
-<div id="portfolio-wrap" class = "col-md-12">
+<div id="portfolio-wrap">
 <?php if ( true ) : ?>
 
   <section id="portfolio">
-   
-    <h4 id="opt2" class="section-title section-title-offset"><span><?php echo "Protfolio"; ?></span></h4>
+  
+    <h4 id="opt2" class="section-title section-title-offset">
+    <span>Protfolio</span></h4>
 
     <nav id="portfolio-filters">
       <a href="#" data-filter="*"><?php echo "Show All"; ?></a>

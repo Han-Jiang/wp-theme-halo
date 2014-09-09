@@ -5,6 +5,10 @@ Template Name: 时间轴归档
 ?>
 <?php get_header(); ?>  
 
+<div class="container">
+      
+    <div class="row">
+
 <style type="text/css">
 
 .archive-title{border-bottom:1px #eee solid;position:relative;padding-bottom:4px;margin-bottom:10px}    
@@ -22,7 +26,7 @@ Template Name: 时间轴归档
 .m-title:after{position:absolute;left:96px;background:#ccc;height:12px;width:12px;border-radius:6px;top:6px;content:""}
 </style>
 
-    <div id="content" class="col-md-9" >
+    <div id="content" class="col-md-8 col-md-offset-2" >
 
     <div class="archives">
         <?php
@@ -75,5 +79,7 @@ Template Name: 时间轴归档
     
 
 </script>
+  </div><!--/.row-->
+</div><!--/.container-->
 
 <?php get_footer();?>

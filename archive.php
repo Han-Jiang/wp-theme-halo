@@ -1,5 +1,8 @@
 <?php get_header(); ?>	
- 	
+ <div class="container">
+      
+    <div class="row">
+
  		<div id="content" class="col-md-10 col-md-offset-1" >
  			<!-- bread crumb -->
 			<?php include (TEMPLATEPATH . '/include/breadcrumb.php'); ?>
@@ -22,5 +25,6 @@
 			<?php endif; ?>
 
  		</div>
-
+  </div><!--/.row-->
+</div><!--/.container-->
 <?php get_footer();?>
