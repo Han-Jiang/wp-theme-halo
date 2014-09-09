@@ -9,8 +9,8 @@
       <div class="contact col-md-6">
         <?php
           $contact_page_id = $ci['m_contact_page'];
-          // 578
-          $post = get_post(2090);
+          $post = get_post(578);
+          // $post = get_post(2090);
           setup_postdata($post);
         ?>
         <h3><?php the_title(); ?></h3>
