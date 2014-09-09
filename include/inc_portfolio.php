@@ -1,3 +1,7 @@
+<div class="container">
+      
+    <div class="row">
+
 <div id="portfolio-wrap">
 <?php if ( true ) : ?>
 
@@ -61,6 +65,10 @@
 
 <?php endif; ?>
 </div><!-- /portfolio-wrap -->
+
+
+  </div><!--/.row-->
+</div><!--/.container-->
 
 
 

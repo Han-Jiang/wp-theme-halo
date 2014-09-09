@@ -1,5 +1,5 @@
 	 	<!-- 文章 -->	
-		<div class="single_post_box col-md-10 col-md-offset-1">
+		<div class="single_post_box">
 			
 			<center>
 				<div class="single_post_title_box">
@@ -60,8 +60,8 @@
 		</div><!--.single_post_box -->
 
 		<div class="single-pre-next col-md-12 pager">
-			<li class="clear"> <?php previous_post_link('%link','【上篇】%title') ?> </li>
-			<li class="clear"> <?php next_post_link('%link','【下篇】%title') ?> </li>
+			<li class="pull-left"> <?php previous_post_link('%link','【上篇】%title') ?> </li>
+			<li class="pull-right"> <?php next_post_link('%link','【下篇】%title') ?> </li>
 		</div>
 		
 		

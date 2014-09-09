@@ -12,7 +12,7 @@
     }
 </script>
 
- 		<div id="content" class="col-md-12" >
+ 		<div id="content" class="col-md-10 col-md-offset-1" >
 
          <?php include (TEMPLATEPATH . '/include/breadcrumb.php'); ?>
 
