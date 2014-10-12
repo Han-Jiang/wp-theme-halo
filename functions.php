@@ -23,12 +23,12 @@ add_image_size( 'client_thumb', 420, 250, true);
 
 //排除文章
 function custom_exclude_category( $query ) {
-    if ( !$query->is_single()) {
-        $query->set( 'category__not_in', '34' );  //-34表示需要排除的分类目录
-    }
-    if ( $query->is_home()) {
-         $query->set( 'category__not_in', array(34,45) );
-    }
+    // if ( !$query->is_single()) {
+    //     $query->set( 'category__not_in', '34' );  //-34表示需要排除的分类目录
+    // }
+    // if ( $query->is_home()) {
+    //      $query->set( 'category__not_in', array(34,45) );
+    // }
 }
 add_action( 'pre_get_posts', 'custom_exclude_category' );
 

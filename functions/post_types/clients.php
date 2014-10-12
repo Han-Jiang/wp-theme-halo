@@ -29,7 +29,7 @@ function ci_create_cpt_clients() {
     'has_archive' => false,
     'rewrite' => true,
     'menu_position' => 5,
-    'supports' => array('title', 'thumbnail')
+    'supports' => array('title', 'editor', 'thumbnail')
   );
 
   register_post_type( 'Client' , $args );

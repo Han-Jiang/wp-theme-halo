@@ -46,7 +46,8 @@
       echo $item_skill->slug.' ';
       endforeach; ?> ">
 
-        <a href="<?php echo $thumb_url[0]; ?>"
+        <a href="<?php the_permalink()  //echo $thumb_url[0]; ?>"
+
         rel="fancybox[<?php echo $post->ID; ?>]"
         title="<?php echo esc_attr(get_the_excerpt()); ?>" class="fb">
 

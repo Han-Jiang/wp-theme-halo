@@ -13,14 +13,13 @@
     ?>
     <article class="col-md-3 client-item">
       <?php the_post_thumbnail('client_thumb', array("class"=>"scale-with-grid")); ?>
-    </article><!-- /portfolio-item -->
+    </article><!-- /client-item -->
     <?php endwhile; ?>
   </div><!-- /client-items -->
 
-  <h3 class="action">"Like it, contact me!"</h3>
 
-</section><!-- /portfolio -->
+</section><!-- /clients -->
 
 <?php endif; wp_reset_postdata(); //loop ?>
 
-</div><!-- /portfolio-wrap -->
+</div><!-- /client-wrap -->
