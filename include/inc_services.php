@@ -13,7 +13,7 @@
   ?>
 
     <li class="col-md-3 ">
-      <?php the_post_thumbnail('full', array('class' => 'scale-with-grid')); ?>
+      <?php the_post_thumbnail('full', array('class' => 'scale-with-grid img-circle')); ?>
       <h2><?php the_title(); ?></h2>
       <?php the_content(); ?>
     </li>
